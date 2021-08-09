@@ -1,2 +1,3 @@
-# Terraform Module of Cloudwatch Event for Lambda
+# Cloudwatch-Event Terraform Module
 
+Terraform module, which creates AWS Cloudwatch Event resources for Lambda.
