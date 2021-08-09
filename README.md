@@ -1,1 +1,2 @@
-# terraform-module-cloudwatch-lambdaevent
+# Terraform Module of Cloudwatch Event for Lambda
+
