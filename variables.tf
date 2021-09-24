@@ -45,3 +45,9 @@ variable "lambda_function_name" {
   type        = string
   default     = ""
 }
+
+variable "lambda_permission" {
+  description = "whether set lambda function permission or not"
+  type        = bool
+  default     = true
+}

@@ -12,6 +12,7 @@ resource "aws_cloudwatch_event_target" "this" {
   input     = var.input
 }
 resource "aws_lambda_permission" "this" {
+  count         = var.lambda_permission == true ? 1 : 0
   statement_id  = "allow_cloudwatch_${aws_cloudwatch_event_rule.this.name}_to_invoke_${var.lambda_function_name}_${var.lambda_alias_name}"
   action        = "lambda:InvokeFunction"
   function_name = "${var.lambda_function_name}:${var.lambda_alias_name}"
