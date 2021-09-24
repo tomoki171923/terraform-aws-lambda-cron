@@ -17,4 +17,11 @@ resource "aws_lambda_permission" "this" {
   function_name = "${var.lambda_function_name}:${var.lambda_alias_name}"
   principal     = "events.amazonaws.com"
   source_arn    = aws_cloudwatch_event_rule.this.arn
+  lifecycle {
+    ignore_changes = [
+      function_name,
+      qualifier,
+      id
+    ]
+  }
 }
